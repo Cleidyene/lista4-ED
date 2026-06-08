@@ -48,7 +48,7 @@ Halo Infinite | The legendary Halo series returns with the most expansive Master
 No results found
 
 ./app 0 ha
-# No results found
 ```
+No results found
 
 A busca é case-insensitive e ignora espaços em branco, portanto os prefixos `"ha"`, `"HA"` e `"Ha"` são equivalentes, assim como `"halflife"`, `"half life"` e `"HALF L"`.
