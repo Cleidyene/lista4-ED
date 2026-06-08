@@ -1,4 +1,4 @@
-# Trabalho 4 — Sistema de Autocomplete de Jogos com Trie
+# Lista 4 — Sistema de Autocomplete de Jogos com Trie
 
 ## Descrição
 
