@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-const int ALPHABET_SIZE = 256;
+const int ALPHABET_SIZE = 36;
 
 class TrieNode {
 
