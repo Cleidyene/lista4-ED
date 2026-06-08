@@ -36,10 +36,14 @@ Onde `k` é número máximo de sugestões a retornar e `prefixo` é o prefixo us
 
 ```bash
 ./app 3 ha
+```
 Halo The Master Chief Collection | The Master Chief s iconic journey includes six games built for PC and collected in a single integrated experience Whether you re a long time fan or meeting Spartan 117 for the first time The Master Chief Collection is the definitive Halo gaming experience | 192219
 Halo Infinite | The legendary Halo series returns with the most expansive Master Chief campaign yet and a ground breaking free to play multiplayer experience | 160647
 
+
+```bash
 ./app 3 zelda
+```
 # No results found
 
 ./app 0 ha
