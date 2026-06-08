@@ -42,7 +42,7 @@ std::string key = toSearchKey(game->getTitle());
 TrieNode* current = root;
 
 for(int i = 0; i < key.size(); i++){
-    int index = key[i];
+    int index = charToIndex(key[i]);
     if(current->children[index] == nullptr){
         TrieNode* no = new TrieNode();
         current->children[index] = no;
@@ -56,12 +56,26 @@ current->game = game;
 return true;
 }
 
+int Trie::chartoindex(char c)
+{
+    if (c >= 97 && c <= 122)
+    {
+        return c - 97;
+    }
+    if (c >= 48 && c <= 57)
+    {
+
+        return 26 + (c - 48);
+    }
+    return -1;
+}
+
 bool Trie::contains(std::string title){
 std::string key = toSearchKey(title);
 TrieNode* current = root;
 
 for(int i = 0; i < key.size(); i++){
-    int index = key[i];
+    int index = charToIndex(key[i]);
 
     if(current->children[index] == nullptr){
         return false;
@@ -171,7 +185,7 @@ std::vector<Game *> Trie::autocomplete(std::string prefix, int k)
     TrieNode *current = root;
 
     for (int i = 0; i < (int)key.size(); i++){
-    int idx = key[i];
+        int index = charToIndex(key[i]);
 
     if (current->children[idx] == nullptr){
         return results;
