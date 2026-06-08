@@ -47,6 +47,7 @@ Halo Infinite | The legendary Halo series returns with the most expansive Master
 ```
 No results found
 
+```bash
 ./app 0 ha
 ```
 No results found
