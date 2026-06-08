@@ -29,15 +29,17 @@ public:
     Trie();
     ~Trie();
 
-    bool insert(Game* game);
+    bool insert(Game *game);
     bool contains(std::string title);
 
-    std::vector<Game*> autocomplete(std::string prefix, int k);
+    std::vector<Game *> autocomplete(std::string prefix, int k);
 
     std::string toSearchKey(std::string text);
-    void sortResults(std::vector<Game*>& games);
+    void sortResults(std::vector<Game *> &games);
 
-    // Outros métodos auxiliares, se necessário
+    void merge(std::vector<Game *> &games, int left, int mid, int right);
+    void mergeSort(std::vector<Game *> &games, int left, int right);
+    void collectGames(TrieNode *node, std::vector<Game *> &results);
 };
 
 #endif
