@@ -10,6 +10,9 @@ TrieNode::TrieNode(){
 }
 
 TrieNode::~TrieNode(){
+    for (int i = 0; i < ALPHABET_SIZE; i++) {
+        delete children[i];
+    }
 }
 
 Trie::Trie(){
@@ -17,6 +20,7 @@ Trie::Trie(){
 }
 
 Trie::~Trie(){
+    delete root;
 }
 
 std::string Trie::toSearchKey(std::string text){
@@ -56,7 +60,7 @@ current->game = game;
 return true;
 }
 
-int Trie::chartoindex(char c)
+int Trie::charToIndex(char c)
 {
     if (c >= 97 && c <= 122)
     {
@@ -187,11 +191,11 @@ std::vector<Game *> Trie::autocomplete(std::string prefix, int k)
     for (int i = 0; i < (int)key.size(); i++){
         int index = charToIndex(key[i]);
 
-    if (current->children[idx] == nullptr){
+    if (current->children[index] == nullptr){
         return results;
     }
 
-    current = current->children[idx];
+    current = current->children[index];
 }
 
     collectGames(current, results);

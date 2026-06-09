@@ -24,6 +24,11 @@ private:
 
     TrieNode* root;
 
+    int charToIndex(char c);
+    void merge(std::vector<Game *> &games, int left, int mid, int right);
+    void mergeSort(std::vector<Game *> &games, int left, int right);
+    void collectGames(TrieNode *node, std::vector<Game *> &results);
+
 public:
 
     Trie();
@@ -36,10 +41,6 @@ public:
 
     std::string toSearchKey(std::string text);
     void sortResults(std::vector<Game *> &games);
-    int chartoindex(char c)
-    void merge(std::vector<Game *> &games, int left, int mid, int right);
-    void mergeSort(std::vector<Game *> &games, int left, int right);
-    void collectGames(TrieNode *node, std::vector<Game *> &results);
 };
 
 #endif
